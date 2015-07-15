@@ -56,7 +56,7 @@ module pwm_8bit #
 
     always @(posedge clk) begin
         if (reset)
-            duty_cycle_count_reg <= 8'd0;
+            duty_cycle_count_reg <= 0;
         else if (duty_cycle_valid)
             duty_cycle_count_reg <= duty_cycle * STEP_SIZE;
     end
