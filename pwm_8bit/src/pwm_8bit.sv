@@ -50,7 +50,7 @@ module pwm_8bit #
             if ((enable == 1'b0) || (pwm_counter >= PERIOD_COUNT))
                 pwm_counter <= 0;
             else
-                pwm_counter <= pwm_counter + STEP_SIZE;
+                pwm_counter <= pwm_counter + 1;
         end
     end
 
